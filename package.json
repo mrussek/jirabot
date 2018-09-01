@@ -1,0 +1,24 @@
+{
+  "name": "jirabot",
+  "version": "1.0.0",
+  "description": "DialogFlow / Actions on Google bot for JIRA integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrussek/jirabot.git"
+  },
+  "keywords": [
+    "JIRA",
+    "chatbot",
+    "dialogflow"
+  ],
+  "author": "Maxwell Russek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrussek/jirabot/issues"
+  },
+  "homepage": "https://github.com/mrussek/jirabot#readme"
+}
