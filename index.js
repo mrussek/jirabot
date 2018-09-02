@@ -1,3 +1,3 @@
-const jirabot = require('./jirabot')
+const aogbot = require('./aogbot')
 
-module.exports.fulfillment = jirabot.fulfillment
+module.exports.fulfillment = aogbot.fulfillment

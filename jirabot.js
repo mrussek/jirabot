@@ -1,4 +1,3 @@
-const { dialogflow } = require('actions-on-google')
 const functions = require('firebase-functions')
 const rp = require('request-promise')
 
@@ -31,18 +30,8 @@ const fulfillTicketRequest = issue => {
         .then(issue => `${ticketId} is ${issue.fields.description}`)
 }
 
-const app = dialogflow()
-app.intent('Ticket Description', (conv, params) => {
-    const ticket = params['Ticket']
-    return fulfillTicketRequest(ticket)
-        .then(s => {
-            conv.ask(s)
-        })
-})
-
 module.exports = {
     fulfillTicketRequest,
     constructIssue,
-    fetchIssue,
-    fulfillment: functions.https.onRequest(app)
+    fetchIssue
 }
