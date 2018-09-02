@@ -38,10 +38,6 @@ app.intent('Ticket Description', (conv, params) => {
         .then(s => {
             conv.ask(s)
         })
-        .catch(e => {
-            console.error(e);
-            conv.ask(e)
-        })
 })
 
 module.exports = {
