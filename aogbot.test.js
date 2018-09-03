@@ -22,11 +22,7 @@ describe('makeApp', () => {
 
         makeApp({ intent })
 
-        const {
-            mock: {
-                calls
-            }
-        } = intent
+        const { mock: { calls } } = intent
 
         const ticketDescriptionCallback = calls.find(call => call[0] === 'Ticket Description')[1]
 
