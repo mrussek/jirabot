@@ -6,9 +6,8 @@ jest.mock('./jirabot')
 describe('makeApp', () => {
     test('exports intents', () => {
         const intent = jest.fn()
-        const app = { intent }
 
-        makeApp(app)
+        makeApp({ intent })
 
         expect(intent).toHaveBeenCalledTimes(2)
 
