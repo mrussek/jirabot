@@ -1,4 +1,3 @@
-const functions = require('firebase-functions')
 const rp = require('request-promise')
 
 const jira = path => {
@@ -24,14 +23,14 @@ const constructIssue = issue => {
     return `${projectId}-${number}`
 }
 
-const fulfillTicketRequest = issue => {
+const ticketDescription = issue => {
     const ticketId = constructIssue(issue)
     return fetchIssue(ticketId)
         .then(issue => `${ticketId} is ${issue.fields.description}`)
 }
 
 module.exports = {
-    fulfillTicketRequest,
+    ticketDescription,
     constructIssue,
     fetchIssue
 }
