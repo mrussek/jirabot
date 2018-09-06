@@ -21,6 +21,7 @@ const makeApp = app => {
 
 const { dialogflow } = require('actions-on-google')
 const app = dialogflow()
+makeApp(app)
 module.exports = {
     makeApp,
     fulfillment: functions.https.onRequest(app)
